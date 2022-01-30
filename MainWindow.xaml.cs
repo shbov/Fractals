@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fractals.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,12 @@ namespace Fractals
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
             var window = new WinTree();
+            window.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Koch();
             window.Show();
         }
     }

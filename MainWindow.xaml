@@ -21,7 +21,7 @@
             <TextBlock>Обдуваемое ветром<LineBreak/>фрактальное дерево</TextBlock>
         </Button>
 
-        <Button HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="0">
+        <Button HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="0" Click="Button_Click">
             <TextBlock>Кривая Коха</TextBlock>
         </Button>
 
