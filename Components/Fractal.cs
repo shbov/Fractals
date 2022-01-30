@@ -7,14 +7,16 @@ using System.Windows;
 
 namespace Fractals.Components
 {
-    internal class Fractal
+    internal abstract class Fractal
     {
         /// <summary>
         /// Глубина рекурсии.
         /// </summary>
-        public int Depth { get; set; }
+        public int Depth { get; set; } = 1;
 
-        public Size Size { get; internal set; }
+        public Size Size { get; set; }
+
+        public abstract void Render();
     }
 
 }

@@ -1,6 +1,7 @@
 ﻿using Fractals.Components;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,26 +26,31 @@ namespace Fractals
         public WinTree()
         {
             InitializeComponent();
+            fractral.Canvas = canvas;
         }
 
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            fractral.Depth = Math.Max(1, (int)e.NewValue);
+            fractral.Render();
         }
 
         private void LeftAngleChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            this.fractral.LeftAngle = e.NewValue * Math.PI / 180;
+            fractral.Render();
         }
 
         private void RightAngleChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            this.fractral.RightAngle = e.NewValue * Math.PI / 180;
+            fractral.Render();
         }
 
-        private void SizeChanged(object sender, SizeChangedEventArgs e)
+        private void CanvasSizeChanged(object sender, SizeChangedEventArgs e)
         {
             this.fractral.Size = e.NewSize;
+            fractral.Render();
         }
     }
 }
