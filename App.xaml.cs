@@ -13,5 +13,6 @@ namespace Fractals
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

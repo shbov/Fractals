@@ -24,5 +24,11 @@ namespace Fractals
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new WinTree();
+            window.Show();
+        }
     }
 }
