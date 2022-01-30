@@ -7,48 +7,45 @@ namespace Fractals.Components
 {
     internal class TreeFractal : Fractal
     {
-        public double LeftAngle { get; set; } = 0;
-
-        public double RightAngle { get; set; } = 0;
-
-        public Canvas Canvas { get; set; }
+        public double LeftAngle { get; set; }
+        public double RightAngle { get; set; }
 
         public override void Render()
         {
+
+            Canvas.Children.Clear();
+
             Draw(
-                new Point(
-                    Canvas.Width / 2, Canvas.Height),
+                 (X: Canvas.ActualWidth / 2, Y: Canvas.ActualHeight),
                     Math.PI / 2,
-                    Canvas.Height / 4,
+                    Canvas.ActualHeight / 4,
                     Depth
             );
         }
 
-        private void Draw(Point start, double angle, double length, int count)
+        private void Draw((double X, double Y) start, double angle, double length, int count)
         {
             if (count == 0)
                 return;
 
-            var end = new Point(
-                start.X + length * Math.Cos(angle),
-                start.Y - length * Math.Sin(angle)
+            var end = (
+                X: start.X + length * Math.Cos(angle),
+                Y: start.Y - length * Math.Sin(angle)
             );
 
-            var line = new Line
-            {
-                X1 = start.X,
-                X2 = end.X,
-                Y1 = start.Y,
-                Y2 = end.Y,
-                StrokeThickness = 4,
-                Stroke = System.Windows.Media.Brushes.Black
-            };
-
-            Canvas.Children.Add(line);
+            Canvas.Children.Add(
+                new Line()
+                {
+                    X1 = start.X,
+                    X2 = end.X,
+                    Y1 = start.Y,
+                    Y2 = end.Y,
+                    StrokeThickness = 1,
+                    Stroke = System.Windows.Media.Brushes.Black
+                });
 
             Draw(end, angle + LeftAngle, length / 1.4, count - 1);
             Draw(end, angle - RightAngle, length / 1.4, count - 1);
-
         }
     }
 }

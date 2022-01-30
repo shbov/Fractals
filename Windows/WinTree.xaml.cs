@@ -32,25 +32,29 @@ namespace Fractals
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             fractral.Depth = Math.Max(1, (int)e.NewValue);
-            fractral.Render();
+
+            if (fractral.Canvas != null)
+                fractral.Render();
         }
 
         private void LeftAngleChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             this.fractral.LeftAngle = e.NewValue * Math.PI / 180;
-            fractral.Render();
+            if (fractral.Canvas != null)
+                fractral.Render();
         }
 
         private void RightAngleChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            this.fractral.RightAngle = e.NewValue * Math.PI / 180;
-            fractral.Render();
+            this.fractral.RightAngle = e.NewValue * Math.PI / 180; 
+            if (fractral.Canvas != null)
+                fractral.Render();
         }
 
         private void CanvasSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            this.fractral.Size = e.NewSize;
-            fractral.Render();
+            if (fractral.Canvas != null)
+                fractral.Render();
         }
     }
 }

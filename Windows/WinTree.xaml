@@ -26,12 +26,12 @@
             </Grid.RowDefinitions>
             
             <TextBlock Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Глубина рекурсии [1;15]" Margin="20,5"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Левый угол (в грудусах) [0;45]" Margin="20,5"/>
-            <TextBlock Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Правый угол (в грудусах) [0;45]" Margin="20,5"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Левый угол (в грудусах) [15;45]" Margin="20,5"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Правый угол (в грудусах) [15;45]" Margin="20,5"/>
 
             <Slider HorizontalContentAlignment="Stretch" Grid.Row="0" Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="1" Margin="20,5" Maximum="15" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="DepthChanged"/>
-            <Slider HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="0" Margin="20,5" Maximum="45" ValueChanged="LeftAngleChanged"/>
-            <Slider HorizontalContentAlignment="Stretch" Grid.Row="2" Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="0" Margin="20,5" Maximum="45" ValueChanged="RightAngleChanged"/>
+            <Slider HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="15" Margin="20,5" Maximum="45" ValueChanged="LeftAngleChanged"/>
+            <Slider HorizontalContentAlignment="Stretch" Grid.Row="2" Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="15" Margin="20,5" Maximum="45" ValueChanged="RightAngleChanged"/>
         </Grid>
     </Grid>
 </Window>
