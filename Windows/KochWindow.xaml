@@ -3,31 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Fractals.Windows"
         mc:Ignorable="d"
         Title="Кривая Коха" Height="450" Width="800">
     <Grid Loaded="ViewboxLoaded">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
         <Viewbox Grid.Row="0" Stretch="Uniform">
-            <Canvas Width="800" Height="400" ClipToBounds="True" x:Name="canvas" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Canvas>
+            <Canvas Width="800" Height="400" ClipToBounds="True" x:Name="canvas" VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch" />
         </Viewbox>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="135"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="135" />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Глубина рекурсии [1;6]" Margin="20,5"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Глубина рекурсии [1;6]" Margin="20,5" />
 
-            <Slider AutoToolTipPlacement="BottomRight" HorizontalContentAlignment="Stretch" Grid.Row="0" Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="1" Margin="20,5" Maximum="6" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="DepthChanged"/>
+            <Slider AutoToolTipPlacement="BottomRight" HorizontalContentAlignment="Stretch" Grid.Row="0"
+                    Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="1" Margin="20,5" Maximum="6"
+                    IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="DepthChanged" />
         </Grid>
     </Grid>
 </Window>

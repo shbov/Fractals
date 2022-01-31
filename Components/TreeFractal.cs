@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Windows;
-using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Shapes;
 
 namespace Fractals.Components
@@ -13,14 +12,13 @@ namespace Fractals.Components
 
         public override void Render()
         {
-
             Canvas.Children.Clear();
 
             Draw(
-                 (X: Canvas.ActualWidth / 2, Y: Canvas.ActualHeight),
-                    Math.PI / 2,
-                    Canvas.ActualHeight / 4,
-                    Depth
+                (X: Canvas.ActualWidth / 2, Y: Canvas.ActualHeight),
+                Math.PI / 2,
+                Canvas.ActualHeight / 4,
+                Depth
             );
         }
 
@@ -35,14 +33,14 @@ namespace Fractals.Components
             );
 
             Canvas.Children.Add(
-                new Line()
+                new Line
                 {
                     X1 = start.X,
                     X2 = end.X,
                     Y1 = start.Y,
                     Y2 = end.Y,
                     StrokeThickness = 1,
-                    Stroke = System.Windows.Media.Brushes.Black
+                    Stroke = Brushes.Black
                 });
 
             Draw(end, angle + LeftAngle, Ratio * length, count - 1);

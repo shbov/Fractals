@@ -1,26 +1,15 @@
-﻿using Fractals.Components;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Fractals.Components;
 
 namespace Fractals.Windows
 {
     /// <summary>
-    /// Interaction logic for TriangleWindow.xaml
+    ///     Interaction logic for TriangleWindow.xaml
     /// </summary>
     public partial class TriangleWindow : Window
     {
-        private TriangleFractal fractral = new();
+        private readonly TriangleFractal fractral = new();
 
         public TriangleWindow()
         {
@@ -30,7 +19,7 @@ namespace Fractals.Windows
 
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            fractral.Depth = Math.Max(1, (int)e.NewValue);
+            fractral.Depth = Math.Max(1, (int) e.NewValue);
 
             if (fractral.Canvas != null)
                 fractral.Render();

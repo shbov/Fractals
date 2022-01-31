@@ -1,8 +1,11 @@
 ﻿using System.Drawing;
+using System.Windows;
+using System.Windows.Media;
+using Rectangle = System.Windows.Shapes.Rectangle;
 
 namespace Fractals.Components
 {
-    class CarpetFractal : Fractal
+    internal class CarpetFractal : Fractal
     {
         public override void Render()
         {
@@ -10,21 +13,22 @@ namespace Fractals.Components
 
             Draw(DrawMain(), Depth);
         }
+
         private RectangleF DrawMain()
         {
             float x, y, side;
 
             if (Canvas.ActualWidth > Canvas.ActualHeight)
             {
-                side = (float)Canvas.ActualHeight;
-                x = (float)(Canvas.ActualWidth - side) / 2;
+                side = (float) Canvas.ActualHeight;
+                x = (float) (Canvas.ActualWidth - side) / 2;
                 y = 0;
             }
             else
             {
-                side = (float)Canvas.ActualWidth;
+                side = (float) Canvas.ActualWidth;
                 x = 0;
-                y = (float)(Canvas.ActualHeight - side) / 2;
+                y = (float) (Canvas.ActualHeight - side) / 2;
             }
 
             var rectangle = new RectangleF(
@@ -33,20 +37,20 @@ namespace Fractals.Components
             );
 
 
-            Canvas.Children.Add(new System.Windows.Shapes.Rectangle()
+            Canvas.Children.Add(new Rectangle
             {
                 Width = side,
                 Height = side,
-                Margin = new System.Windows.Thickness(x, y, 0, 0),
+                Margin = new Thickness(x, y, 0, 0),
                 StrokeThickness = 1,
-                Stroke = System.Windows.Media.Brushes.Black
+                Stroke = Brushes.Black
             });
 
             return rectangle;
         }
 
         /// <summary>
-        /// Recursion draw
+        ///     Recursion draw
         /// </summary>
         /// <param name="rectangle">Previous rectangle</param>
         /// <param name="count">Recursion depth</param>
@@ -71,20 +75,18 @@ namespace Fractals.Components
                     : PointF.Add(tempLocation, new SizeF(newSide, 0));
             }
 
-            Canvas.Children.Add(new System.Windows.Shapes.Rectangle()
+            Canvas.Children.Add(new Rectangle
             {
                 Width = newRectangles[4].Width,
                 Height = newRectangles[4].Height,
-                Margin = new System.Windows.Thickness(newRectangles[4].X, newRectangles[4].Y, 0, 0),
+                Margin = new Thickness(newRectangles[4].X, newRectangles[4].Y, 0, 0),
                 StrokeThickness = 1,
-                Stroke = System.Windows.Media.Brushes.Black
+                Stroke = Brushes.Black
             });
 
             for (var i = 0; i < newRectangles.Length; i++)
-            {
                 if (i != 4)
                     Draw(newRectangles[i], count - 1);
-            }
         }
     }
 }

@@ -1,27 +1,15 @@
-﻿using Fractals.Components;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Fractals.Components;
 
 namespace Fractals
 {
     /// <summary>
-    /// Interaction logic for WinTree.xaml
+    ///     Interaction logic for WinTree.xaml
     /// </summary>
     public partial class WinTreeWindow : Window
     {
-        private TreeFractal fractral = new();
+        private readonly TreeFractal fractral = new();
 
         public WinTreeWindow()
         {
@@ -31,7 +19,7 @@ namespace Fractals
 
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            fractral.Depth = Math.Max(1, (int)e.NewValue);
+            fractral.Depth = Math.Max(1, (int) e.NewValue);
 
             if (fractral.Canvas != null)
                 fractral.Render();
@@ -39,7 +27,7 @@ namespace Fractals
 
         private void LeftAngleChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            this.fractral.LeftAngle = e.NewValue * Math.PI / 180;
+            fractral.LeftAngle = e.NewValue * Math.PI / 180;
 
             if (fractral.Canvas != null)
                 fractral.Render();
@@ -47,7 +35,7 @@ namespace Fractals
 
         private void RightAngleChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            this.fractral.RightAngle = e.NewValue * Math.PI / 180;
+            fractral.RightAngle = e.NewValue * Math.PI / 180;
 
             if (fractral.Canvas != null)
                 fractral.Render();
@@ -55,7 +43,7 @@ namespace Fractals
 
         private void RatioChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            this.fractral.Ratio = e.NewValue;
+            fractral.Ratio = e.NewValue;
             if (fractral.Canvas != null)
                 fractral.Render();
         }

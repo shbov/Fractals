@@ -1,5 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace Fractals.Components
 {
@@ -24,10 +25,10 @@ namespace Fractals.Components
             // Посмотрим, остановимся ли мы.
             if (level == 0)
             {
-                var polygon = new System.Windows.Shapes.Polygon()
+                var polygon = new Polygon
                 {
                     StrokeThickness = 1,
-                    Stroke = System.Windows.Media.Brushes.Black,
+                    Stroke = Brushes.Black
                 };
 
                 polygon.Points.Add(top_point);
