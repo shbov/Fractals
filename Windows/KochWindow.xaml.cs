@@ -18,26 +18,26 @@ namespace Fractals.Windows
     /// <summary>
     /// Interaction logic for Koch.xaml
     /// </summary>
-    public partial class Koch : Window
+    public partial class KochWindow : Window
     {
         private KochFractal fractral = new();
 
-        public Koch()
+        public KochWindow()
         {
             InitializeComponent();
             fractral.Canvas = canvas;
-        }
-
-        private void CanvasSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (fractral.Canvas != null)
-                fractral.Render();
         }
 
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             fractral.Depth = Math.Max(1, (int)e.NewValue);
 
+            if (fractral.Canvas != null)
+                fractral.Render();
+        }
+
+        private void ViewboxLoaded(object sender, RoutedEventArgs e)
+        {
             if (fractral.Canvas != null)
                 fractral.Render();
         }

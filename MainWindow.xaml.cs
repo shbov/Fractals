@@ -28,13 +28,25 @@ namespace Fractals
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
-            var window = new WinTree();
+            var window = new WinTreeWindow();
             window.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var window = new Koch();
+            var window = new KochWindow();
+            window.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var window = new CarpetWindow();
+            window.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var window = new TriangleWindow();
             window.Show();
         }
     }

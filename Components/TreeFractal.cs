@@ -9,6 +9,7 @@ namespace Fractals.Components
     {
         public double LeftAngle { get; set; }
         public double RightAngle { get; set; }
+        public double Ratio { get; set; }
 
         public override void Render()
         {
@@ -44,8 +45,8 @@ namespace Fractals.Components
                     Stroke = System.Windows.Media.Brushes.Black
                 });
 
-            Draw(end, angle + LeftAngle, length / 1.4, count - 1);
-            Draw(end, angle - RightAngle, length / 1.4, count - 1);
+            Draw(end, angle + LeftAngle, Ratio * length, count - 1);
+            Draw(end, angle - RightAngle, Ratio * length, count - 1);
         }
     }
 }

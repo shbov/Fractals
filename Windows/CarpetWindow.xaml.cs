@@ -1,7 +1,6 @@
 ﻿using Fractals.Components;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,16 +13,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Fractals
+namespace Fractals.Windows
 {
     /// <summary>
-    /// Interaction logic for WinTree.xaml
+    /// Логика взаимодействия для CarpetWindow.xaml
     /// </summary>
-    public partial class WinTree : Window
+    public partial class CarpetWindow : Window
     {
-        private TreeFractal fractral = new();
+        private CarpetFractal fractral = new();
 
-        public WinTree()
+        public CarpetWindow()
         {
             InitializeComponent();
             fractral.Canvas = canvas;
@@ -32,26 +31,11 @@ namespace Fractals
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             fractral.Depth = Math.Max(1, (int)e.NewValue);
-
             if (fractral.Canvas != null)
                 fractral.Render();
         }
 
-        private void LeftAngleChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            this.fractral.LeftAngle = e.NewValue * Math.PI / 180;
-            if (fractral.Canvas != null)
-                fractral.Render();
-        }
-
-        private void RightAngleChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            this.fractral.RightAngle = e.NewValue * Math.PI / 180; 
-            if (fractral.Canvas != null)
-                fractral.Render();
-        }
-
-        private void CanvasSizeChanged(object sender, SizeChangedEventArgs e)
+        private void ViewboxLoaded(object sender, RoutedEventArgs e)
         {
             if (fractral.Canvas != null)
                 fractral.Render();

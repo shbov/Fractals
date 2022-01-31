@@ -2,18 +2,30 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Windows\Koch.xaml.cs">
+    <Compile Update="Windows\CarpetWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Windows\WinTree.xaml.cs">
+    <Compile Update="Windows\KochWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\TriangleWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\WinTreeWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Windows\Koch.xaml">
+    <Page Update="Windows\CarpetWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\WinTree.xaml">
+    <Page Update="Windows\KochWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\TriangleWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\WinTreeWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

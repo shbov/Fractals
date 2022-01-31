@@ -25,8 +25,12 @@
             <TextBlock>Кривая Коха</TextBlock>
         </Button>
 
-        <Button HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="0">
+        <Button HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="0" Click="Button_Click_1">
             <TextBlock>Ковер Серпинского</TextBlock>
+        </Button>
+
+        <Button HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" Click="Button_Click_2">
+            <TextBlock>Треугольник Серпинского</TextBlock>
         </Button>
     </Grid>
 </Window>

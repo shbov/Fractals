@@ -17,5 +17,4 @@ namespace Fractals.Components
         public Canvas Canvas { get; set; }
         public abstract void Render();
     }
-
 }
