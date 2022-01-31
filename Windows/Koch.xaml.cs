@@ -26,7 +26,6 @@ namespace Fractals.Windows
         {
             InitializeComponent();
             fractral.Canvas = canvas;
-
         }
 
         private void CanvasSizeChanged(object sender, SizeChangedEventArgs e)

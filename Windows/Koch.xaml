@@ -25,7 +25,7 @@
 
             <TextBlock Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Глубина рекурсии [1;6]" Margin="20,5"/>
 
-            <Slider HorizontalContentAlignment="Stretch" Grid.Row="0" Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="1" Margin="20,5" Maximum="6" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="DepthChanged"/>
+            <Slider AutoToolTipPlacement="BottomRight" HorizontalContentAlignment="Stretch" Grid.Row="0" Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="1" Margin="20,5" Maximum="6" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="DepthChanged"/>
         </Grid>
     </Grid>
 </Window>
