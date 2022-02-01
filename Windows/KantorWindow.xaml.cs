@@ -1,25 +1,39 @@
-﻿using System;
+using System;
 using System.Windows;
 using Fractals.Components;
 
 namespace Fractals.Windows
 {
-    /// <summary>
-    ///     Логика взаимодействия для CarpetWindow.xaml
-    /// </summary>
-    public partial class CarpetWindow : Window
+    public partial class KantorWindow : Window
     {
-        private readonly CarpetFractal _fractral = new();
+        private readonly KantorFractal _fractral = new();
 
-        public CarpetWindow()
+        public KantorWindow()
         {
             InitializeComponent();
             _fractral.Canvas = Canvas;
         }
 
+        private void SpaceChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            _fractral.Space = e.NewValue;
+
+            if (_fractral.Canvas != null)
+                _fractral.Render();
+        }
+
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             _fractral.Depth = Math.Max(1, (int) e.NewValue);
+
+            if (_fractral.Canvas != null)
+                _fractral.Render();
+        }
+
+        private void HeightChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            _fractral.Height = e.NewValue;
+
             if (_fractral.Canvas != null)
                 _fractral.Render();
         }

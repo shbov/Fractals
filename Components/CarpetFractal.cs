@@ -36,7 +36,6 @@ namespace Fractals.Components
                 new SizeF(side, side)
             );
 
-
             Canvas.Children.Add(new Rectangle
             {
                 Width = side,

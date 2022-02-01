@@ -4,15 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Обдуваемое ветром фрактальное дерево" Height="450" Width="800">
+        Title="Обдуваемое ветром фрактальное дерево" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="200" />
+            <RowDefinition Height="220" />
         </Grid.RowDefinitions>
 
-        <Viewbox Grid.Row="0" Stretch="Uniform" Loaded="ViewboxLoaded">
-            <Canvas Width="800" Height="250" ClipToBounds="True" x:Name="canvas" VerticalAlignment="Stretch"
+        <Viewbox Grid.Row="0" Stretch="Uniform" Loaded="ViewboxLoaded" Margin="20,0">
+            <Canvas Background="White" Width="230" Height="230" ClipToBounds="True" x:Name="Canvas"
+                    VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch" />
         </Viewbox>
 
@@ -27,25 +28,29 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <TextBlock FontSize="12" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Глубина рекурсии [1;12]"
                        Margin="20,5" />
             <TextBlock FontSize="12" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap"
-                       Text="Левый угол (в грудусах) [15;90]" Margin="20,5" />
+                       Text="Левый угол (в грудусах) [15;45]" Margin="20,5" />
             <TextBlock FontSize="12" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap"
-                       Text="Правый угол (в грудусах) [15;90]" Margin="20,5" />
+                       Text="Правый угол (в грудусах) [15;45]" Margin="20,5" />
             <TextBlock FontSize="12" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="Коэффициент [0.5;0.75]"
                        Margin="20,5" />
+
+            <Button Click="ButtonBase_OnClick" Content="Сохранить как png" Margin="20,5" FontSize="12" Grid.Row="4"
+                    Grid.Column="1" />
 
             <Slider AutoToolTipPlacement="BottomRight" HorizontalContentAlignment="Stretch" Grid.Row="0"
                     Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="1" Margin="20,5" Maximum="12"
                     IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="DepthChanged" />
             <Slider AutoToolTipPlacement="BottomRight" HorizontalContentAlignment="Stretch" Grid.Row="1"
-                    Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="15" Margin="20,5" Maximum="90"
+                    Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="15" Margin="20,5" Maximum="45"
                     ValueChanged="LeftAngleChanged" />
             <Slider AutoToolTipPlacement="BottomRight" HorizontalContentAlignment="Stretch" Grid.Row="2"
-                    Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="15" Margin="20,5" Maximum="90"
+                    Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="15" Margin="20,5" Maximum="45"
                     ValueChanged="RightAngleChanged" />
             <Slider AutoToolTipPlacement="BottomRight" HorizontalContentAlignment="Stretch" Grid.Row="3"
                     Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="0.5" Margin="20,5" Maximum="0.75"

@@ -14,7 +14,7 @@ namespace Fractals.Windows
         public TriangleWindow()
         {
             InitializeComponent();
-            _fractral.Canvas = canvas;
+            _fractral.Canvas = Canvas;
         }
 
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -29,6 +29,12 @@ namespace Fractals.Windows
         {
             if (_fractral.Canvas != null)
                 _fractral.Render();
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (_fractral.Canvas != null)
+                _fractral.Save();
         }
     }
 }

@@ -4,15 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="TriangleWindow" Height="450" Width="800">
+        Title="TriangleWindow" MinHeight="450" MinWidth="800">
     <Grid Loaded="ViewboxLoaded">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="90" />
         </Grid.RowDefinitions>
 
-        <Viewbox Grid.Row="0" Stretch="Uniform">
-            <Canvas Width="400" Height="346.41016" ClipToBounds="True" x:Name="canvas" VerticalAlignment="Stretch"
+        <Viewbox Grid.Row="0" Stretch="Uniform" Margin="20,0">
+            <Canvas Background="White" Width="360" Height="311.76915" ClipToBounds="True" x:Name="Canvas"
+                    VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch" />
         </Viewbox>
 
@@ -23,9 +24,13 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Глубина рекурсии [1;6]" Margin="20,5" />
+
+            <Button Click="ButtonBase_OnClick" Content="Сохранить как png" Margin="20,5" FontSize="12" Grid.Row="1"
+                    Grid.Column="1" />
 
             <Slider AutoToolTipPlacement="BottomRight" HorizontalContentAlignment="Stretch" Grid.Row="0"
                     Grid.Column="1" IsSelectionRangeEnabled="True" Minimum="1" Margin="20,5" Maximum="6"

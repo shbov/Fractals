@@ -17,7 +17,7 @@ namespace Fractals.Components
             Draw(
                 (X: Canvas.ActualWidth / 2, Y: Canvas.ActualHeight),
                 Math.PI / 2,
-                Canvas.ActualHeight / 4,
+                Canvas.ActualHeight / 5,
                 Depth
             );
         }
