@@ -5,6 +5,9 @@ using Rectangle = System.Windows.Shapes.Rectangle;
 
 namespace Fractals.Components
 {
+    /// <summary>
+    /// Класс, отвечаюший за работу фрактала Канотора.
+    /// </summary>
     public class KantorFractal : Fractal
     {
         public double Space { get; set; }
@@ -33,8 +36,7 @@ namespace Fractals.Components
                 Width = rectangle.Width,
                 Height = rectangle.Height,
                 Margin = new Thickness(rectangle.X, rectangle.Y, 0, 0),
-                StrokeThickness = 1,
-                Stroke = Brushes.Black
+                Fill = Brushes.Black
             });
 
             Draw(

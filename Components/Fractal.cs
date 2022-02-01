@@ -13,7 +13,6 @@ namespace Fractals.Components
         ///     Глубина рекурсии.
         /// </summary>
         public int Depth { get; set; }
-
         public Canvas Canvas { get; set; }
         public abstract void Render();
 
@@ -40,13 +39,13 @@ namespace Fractals.Components
                 var stream = File.Create($"./image-{current}.png");
                 encoder.Save(stream);
                 var path = stream.Name;
-
+                stream.Close();
+                
                 MessageBox.Show(
                     $"Путь к файлу: {path}",
                     "Файл успешно сохранен",
                     MessageBoxButton.OK
                 );
-                stream.Close();
             }
             catch (Exception e)
             {
