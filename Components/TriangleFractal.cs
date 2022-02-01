@@ -5,12 +5,12 @@ using System.Windows.Shapes;
 namespace Fractals.Components
 {
     /// <summary>
-    /// Класс, отвечающий за работу фрактала треугольника.
+    ///     Класс, отвечающий за работу фрактала треугольника.
     /// </summary>
     internal class TriangleFractal : Fractal
     {
         /// <summary>
-        /// Отрисовка фрактала.
+        ///     Отрисовка фрактала.
         /// </summary>
         /// <returns>Обновление canvas.</returns>
         public override void Render()
@@ -26,7 +26,7 @@ namespace Fractals.Components
         }
 
         /// <summary>
-        /// Рекурсивная отрисовка дочерних элементов.
+        ///     Рекурсивная отрисовка дочерних элементов.
         /// </summary>
         /// <param name="level">текущая итерация.</param>
         /// <param name="topPoint">Верхняя точка.</param>

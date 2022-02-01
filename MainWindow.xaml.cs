@@ -4,12 +4,12 @@ using Fractals.Windows;
 namespace Fractals
 {
     /// <summary>
-    /// Класс, отвечающий за работу главного окна.
+    ///     Класс, отвечающий за работу главного окна.
     /// </summary>
     public partial class MainWindow : Window
     {
         /// <summary>
-        /// Конструктор класса.
+        ///     Конструктор класса.
         /// </summary>
         public MainWindow()
         {
@@ -17,7 +17,7 @@ namespace Fractals
         }
 
         /// <summary>
-        /// Обработчик событий при клике на кнопку.
+        ///     Обработчик событий при клике на кнопку.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -27,9 +27,9 @@ namespace Fractals
             var window = new WinTreeWindow();
             window.Show();
         }
-        
+
         /// <summary>
-        /// Обработчик событий при клике на кнопку.
+        ///     Обработчик событий при клике на кнопку.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -39,9 +39,9 @@ namespace Fractals
             var window = new KochWindow();
             window.Show();
         }
-        
+
         /// <summary>
-        /// Обработчик событий при клике на кнопку.
+        ///     Обработчик событий при клике на кнопку.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -51,9 +51,9 @@ namespace Fractals
             var window = new CarpetWindow();
             window.Show();
         }
-        
+
         /// <summary>
-        /// Обработчик событий при клике на кнопку.
+        ///     Обработчик событий при клике на кнопку.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -63,9 +63,9 @@ namespace Fractals
             var window = new TriangleWindow();
             window.Show();
         }
-        
+
         /// <summary>
-        /// Обработчик событий при клике на кнопку.
+        ///     Обработчик событий при клике на кнопку.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>

@@ -5,14 +5,14 @@ using Fractals.Components;
 namespace Fractals.Windows
 {
     /// <summary>
-    /// Класс, отвечающий за работу окна фрактала Кантора.
+    ///     Класс, отвечающий за работу окна фрактала Кантора.
     /// </summary>
     public partial class KantorWindow : Window
     {
         private readonly KantorFractal _fractral = new();
 
         /// <summary>
-        /// Конструктор класса.
+        ///     Конструктор класса.
         /// </summary>
         public KantorWindow()
         {
@@ -21,7 +21,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при изменении отступа.
+        ///     Обратчик события при изменении отступа.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -35,7 +35,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при изменении глубины рекурсии.
+        ///     Обратчик события при изменении глубины рекурсии.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -49,7 +49,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при изменении высоты.
+        ///     Обратчик события при изменении высоты.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -63,7 +63,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при загрузке canvas.
+        ///     Обратчик события при загрузке canvas.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -75,7 +75,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при сохранении canvas.
+        ///     Обратчик события при сохранении canvas.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>

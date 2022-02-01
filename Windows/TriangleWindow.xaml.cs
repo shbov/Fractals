@@ -12,7 +12,7 @@ namespace Fractals.Windows
         private readonly TriangleFractal _fractral = new();
 
         /// <summary>
-        /// Конструктор класса.
+        ///     Конструктор класса.
         /// </summary>
         public TriangleWindow()
         {
@@ -21,7 +21,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при изменении глубины рекурсии.
+        ///     Обратчик события при изменении глубины рекурсии.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -35,7 +35,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при загрузке canvas.
+        ///     Обратчик события при загрузке canvas.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -47,7 +47,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при сохранении canvas.
+        ///     Обратчик события при сохранении canvas.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>

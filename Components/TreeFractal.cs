@@ -11,7 +11,7 @@ namespace Fractals.Components
         public double Ratio { get; set; }
 
         /// <summary>
-        /// Отрисовка фрактала.
+        ///     Отрисовка фрактала.
         /// </summary>
         /// <returns>Обновление canvas.</returns>
         public override void Render()

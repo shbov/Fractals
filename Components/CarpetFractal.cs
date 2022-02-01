@@ -6,12 +6,12 @@ using Rectangle = System.Windows.Shapes.Rectangle;
 namespace Fractals.Components
 {
     /// <summary>
-    /// Класс, отвечающий за отрисовку фрактала.
+    ///     Класс, отвечающий за отрисовку фрактала.
     /// </summary>
     internal class CarpetFractal : Fractal
     {
         /// <summary>
-        /// Отрисовка фрактала.
+        ///     Отрисовка фрактала.
         /// </summary>
         /// <returns>Обновление canvas.</returns>
         public override void Render()
@@ -22,7 +22,7 @@ namespace Fractals.Components
         }
 
         /// <summary>
-        /// Отрисовка первого квадрата.
+        ///     Отрисовка первого квадрата.
         /// </summary>
         /// <returns></returns>
         private RectangleF DrawMain()
@@ -46,13 +46,13 @@ namespace Fractals.Components
                 new PointF(x, y),
                 new SizeF(side, side)
             );
-         
+
             Canvas.Children.Add(CreateRectangle(rectangle));
             return rectangle;
         }
 
         /// <summary>
-        /// Рекурсивная отрисовка квадратов.
+        ///     Рекурсивная отрисовка квадратов.
         /// </summary>
         /// <param name="rectangle"></param>
         /// <param name="count">текущая итерация.</param>
@@ -86,7 +86,7 @@ namespace Fractals.Components
         }
 
         /// <summary>
-        /// Конвертация квадрата.
+        ///     Конвертация квадрата.
         /// </summary>
         /// <param name="rectangle">Квадрат типа RectangleF.</param>
         /// <returns>Квадрат типа Rectangle.</returns>

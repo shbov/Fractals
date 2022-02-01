@@ -12,7 +12,7 @@ namespace Fractals.Windows
         private readonly TreeFractal _fractral = new();
 
         /// <summary>
-        /// Конструктор класса.
+        ///     Конструктор класса.
         /// </summary>
         public WinTreeWindow()
         {
@@ -21,7 +21,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при изменении глубины рекурсии.
+        ///     Обратчик события при изменении глубины рекурсии.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -35,7 +35,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при изменении левого угла.
+        ///     Обратчик события при изменении левого угла.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -49,7 +49,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при изменении правого угла.
+        ///     Обратчик события при изменении правого угла.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -63,7 +63,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при изменении коэффициента.
+        ///     Обратчик события при изменении коэффициента.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -76,7 +76,7 @@ namespace Fractals.Windows
         }
 
         /// <summary>
-        /// Обратчик события при загруке canvas.
+        ///     Обратчик события при загруке canvas.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>
@@ -86,9 +86,9 @@ namespace Fractals.Windows
             if (_fractral.Canvas != null)
                 _fractral.Render();
         }
-        
+
         /// <summary>
-        /// Обратчик события при сохранении canvas.
+        ///     Обратчик события при сохранении canvas.
         /// </summary>
         /// <param name="sender">Отправитель.</param>
         /// <param name="e">Событие.</param>

@@ -5,14 +5,14 @@ using System.Windows.Shapes;
 namespace Fractals
 {
     /// <summary>
-    /// Класс, дополняющий функционал линии.
+    ///     Класс, дополняющий функционал линии.
     /// </summary>
     public sealed class LineExtension
     {
         private readonly Line _line;
 
         /// <summary>
-        /// Линия.
+        ///     Линия.
         /// </summary>
         public Line Item
         {
@@ -26,12 +26,12 @@ namespace Fractals
         }
 
         /// <summary>
-        /// Длина линии.
+        ///     Длина линии.
         /// </summary>
         public double Length => Math.Sqrt(Math.Pow(Item.X2 - Item.X1, 2) + Math.Pow(Item.Y2 - Item.Y1, 2));
-        
+
         /// <summary>
-        /// Угол линии.
+        ///     Угол линии.
         /// </summary>
         public double Angle { get; init; }
     }

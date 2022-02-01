@@ -6,22 +6,22 @@ using Rectangle = System.Windows.Shapes.Rectangle;
 namespace Fractals.Components
 {
     /// <summary>
-    /// Класс, отвечаюший за работу фрактала Канотора.
+    ///     Класс, отвечаюший за работу фрактала Канотора.
     /// </summary>
     public class KantorFractal : Fractal
     {
         /// <summary>
-        /// Отступ.
+        ///     Отступ.
         /// </summary>
         public double Space { get; set; }
-        
+
         /// <summary>
-        /// Высота.
+        ///     Высота.
         /// </summary>
         public double Height { get; set; }
-        
+
         /// <summary>
-        /// Отрисовка фрактала.
+        ///     Отрисовка фрактала.
         /// </summary>
         /// <returns>Обновление cavnas.</returns>
         public override void Render()
@@ -38,7 +38,7 @@ namespace Fractals.Components
         }
 
         /// <summary>
-        /// Рекурсивное 
+        ///     Рекурсивное
         /// </summary>
         /// <param name="rectangle">Прямоугольник.</param>
         /// <param name="count">Текущая итерация.</param>

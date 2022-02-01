@@ -4,12 +4,12 @@ using System.Windows.Shapes;
 namespace Fractals.Components
 {
     /// <summary>
-    /// Класс, отвечающий за работу фрактала Коха.
+    ///     Класс, отвечающий за работу фрактала Коха.
     /// </summary>
     internal class KochFractal : Fractal
     {
         /// <summary>
-        /// Отрисовка фрактала.
+        ///     Отрисовка фрактала.
         /// </summary>
         /// <returns>Обновление canvas.</returns>
         public override void Render()
@@ -32,7 +32,7 @@ namespace Fractals.Components
         }
 
         /// <summary>
-        /// Рекурсивная отрисовка элементов.
+        ///     Рекурсивная отрисовка элементов.
         /// </summary>
         /// <param name="line">Линия.</param>
         /// <param name="depth">Текущая итерация.</param>
