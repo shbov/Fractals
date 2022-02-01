@@ -7,15 +7,31 @@ using System.Windows.Media.Imaging;
 
 namespace Fractals.Components
 {
+    /// <summary>
+    /// Базовый класс для фракталов.
+    /// </summary>
     public abstract class Fractal
     {
         /// <summary>
         ///     Глубина рекурсии.
         /// </summary>
         public int Depth { get; set; }
+        
+        /// <summary>
+        /// Ссылка на canvas.
+        /// </summary>
         public Canvas Canvas { get; set; }
+        
+        /// <summary>
+        /// Отрисовка фрактала.
+        /// </summary>
+        /// <returns></returns>
         public abstract void Render();
 
+        /// <summary>
+        /// Сохранение фрактала в файл.
+        /// </summary>
+        /// <returns>png-файл.</returns>
         public void Save()
         {
             try
@@ -23,13 +39,7 @@ namespace Fractals.Components
                 double dpi = 300;
                 var scale = dpi / 96;
 
-                var bmp = new RenderTargetBitmap(
-                    (int) (Canvas.ActualWidth * scale),
-                    (int) (Canvas.ActualHeight * scale),
-                    dpi,
-                    dpi,
-                    PixelFormats.Pbgra32);
-
+                var bmp = new RenderTargetBitmap((int) (Canvas.ActualWidth * scale), (int) (Canvas.ActualHeight * scale), dpi, dpi, PixelFormats.Pbgra32);
                 bmp.Render(Canvas);
 
                 var encoder = new PngBitmapEncoder();

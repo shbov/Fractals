@@ -10,6 +10,10 @@ namespace Fractals.Components
         public double RightAngle { get; set; }
         public double Ratio { get; set; }
 
+        /// <summary>
+        /// Отрисовка фрактала.
+        /// </summary>
+        /// <returns>Обновление canvas.</returns>
         public override void Render()
         {
             Canvas.Children.Clear();

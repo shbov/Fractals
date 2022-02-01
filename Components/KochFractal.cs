@@ -3,8 +3,15 @@ using System.Windows.Shapes;
 
 namespace Fractals.Components
 {
+    /// <summary>
+    /// Класс, отвечающий за работу фрактала Коха.
+    /// </summary>
     internal class KochFractal : Fractal
     {
+        /// <summary>
+        /// Отрисовка фрактала.
+        /// </summary>
+        /// <returns>Обновление canvas.</returns>
         public override void Render()
         {
             Canvas.Children.Clear();
@@ -24,6 +31,12 @@ namespace Fractals.Components
             );
         }
 
+        /// <summary>
+        /// Рекурсивная отрисовка элементов.
+        /// </summary>
+        /// <param name="line">Линия.</param>
+        /// <param name="depth">Текущая итерация.</param>
+        /// <returns>Отрисовка дочерних элементов.</returns>
         private void Draw(LineExtension line, int depth)
         {
             if (depth == 0)
@@ -33,7 +46,6 @@ namespace Fractals.Components
             }
 
             var newLength = line.Length / 3;
-
             var line1 = new LineExtension
             {
                 Item = new Line

@@ -10,9 +10,20 @@ namespace Fractals.Components
     /// </summary>
     public class KantorFractal : Fractal
     {
+        /// <summary>
+        /// Отступ.
+        /// </summary>
         public double Space { get; set; }
+        
+        /// <summary>
+        /// Высота.
+        /// </summary>
         public double Height { get; set; }
-
+        
+        /// <summary>
+        /// Отрисовка фрактала.
+        /// </summary>
+        /// <returns>Обновление cavnas.</returns>
         public override void Render()
         {
             Canvas.Children.Clear();
@@ -26,6 +37,12 @@ namespace Fractals.Components
             );
         }
 
+        /// <summary>
+        /// Рекурсивное 
+        /// </summary>
+        /// <param name="rectangle">Прямоугольник.</param>
+        /// <param name="count">Текущая итерация.</param>
+        /// <returns>Отрисовка дочерних элементов.</returns>
         private void Draw(RectangleF rectangle, int count)
         {
             if (count == 0)
