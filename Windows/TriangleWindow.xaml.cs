@@ -9,26 +9,26 @@ namespace Fractals.Windows
     /// </summary>
     public partial class TriangleWindow : Window
     {
-        private readonly TriangleFractal fractral = new();
+        private readonly TriangleFractal _fractral = new();
 
         public TriangleWindow()
         {
             InitializeComponent();
-            fractral.Canvas = canvas;
+            _fractral.Canvas = canvas;
         }
 
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            fractral.Depth = Math.Max(1, (int) e.NewValue);
+            _fractral.Depth = Math.Max(1, (int) e.NewValue);
 
-            if (fractral.Canvas != null)
-                fractral.Render();
+            if (_fractral.Canvas != null)
+                _fractral.Render();
         }
 
         private void ViewboxLoaded(object sender, RoutedEventArgs e)
         {
-            if (fractral.Canvas != null)
-                fractral.Render();
+            if (_fractral.Canvas != null)
+                _fractral.Render();
         }
     }
 }

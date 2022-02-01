@@ -35,5 +35,10 @@
                 Click="Button_Click_2">
             <TextBlock>Треугольник Серпинского</TextBlock>
         </Button>
+
+        <Button HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1"
+                Click="Button_Click_3">
+            <TextBlock>Множество Кантора</TextBlock>
+        </Button>
     </Grid>
 </Window>

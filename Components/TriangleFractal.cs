@@ -9,18 +9,17 @@ namespace Fractals.Components
         public override void Render()
         {
             Canvas.Children.Clear();
-            var coef = 0;
+            const int coefficient = 0;
 
-            var x = new Point(Canvas.ActualWidth / 2, coef * Canvas.ActualHeight);
-            var y = new Point(coef * Canvas.ActualWidth, Canvas.ActualHeight);
-            var z = new Point(Canvas.ActualWidth - coef * Canvas.ActualWidth, Canvas.ActualHeight);
+            var x = new Point(Canvas.ActualWidth / 2, coefficient * Canvas.ActualHeight);
+            var y = new Point(coefficient * Canvas.ActualWidth, Canvas.ActualHeight);
+            var z = new Point(Canvas.ActualWidth - coefficient * Canvas.ActualWidth, Canvas.ActualHeight);
 
             DrawTriangle(Depth, x, y, z);
         }
 
-
-        private void DrawTriangle(int level, Point top_point,
-            Point left_point, Point right_point)
+        private void DrawTriangle(int level, Point topPoint,
+            Point leftPoint, Point rightPoint)
         {
             // Посмотрим, остановимся ли мы.
             if (level == 0)
@@ -31,32 +30,32 @@ namespace Fractals.Components
                     Stroke = Brushes.Black
                 };
 
-                polygon.Points.Add(top_point);
-                polygon.Points.Add(left_point);
-                polygon.Points.Add(right_point);
+                polygon.Points.Add(topPoint);
+                polygon.Points.Add(leftPoint);
+                polygon.Points.Add(rightPoint);
 
                 Canvas.Children.Add(polygon);
                 return;
             }
 
             // Найти граничные точки.
-            var left_mid = new Point(
-                (top_point.X + left_point.X) / 2,
-                (top_point.Y + left_point.Y) / 2);
-            var right_mid = new Point(
-                (top_point.X + right_point.X) / 2,
-                (top_point.Y + right_point.Y) / 2);
-            var bottom_mid = new Point(
-                (left_point.X + right_point.X) / 2,
-                (left_point.Y + right_point.Y) / 2);
+            var leftMid = new Point(
+                (topPoint.X + leftPoint.X) / 2,
+                (topPoint.Y + leftPoint.Y) / 2);
+            var rightMid = new Point(
+                (topPoint.X + rightPoint.X) / 2,
+                (topPoint.Y + rightPoint.Y) / 2);
+            var bottomMid = new Point(
+                (leftPoint.X + rightPoint.X) / 2,
+                (leftPoint.Y + rightPoint.Y) / 2);
 
             // Рекурсивно рисуем меньшие треугольники.
             DrawTriangle(level - 1,
-                top_point, left_mid, right_mid);
+                topPoint, leftMid, rightMid);
             DrawTriangle(level - 1,
-                left_mid, left_point, bottom_mid);
+                leftMid, leftPoint, bottomMid);
             DrawTriangle(level - 1,
-                right_mid, bottom_mid, right_point);
+                rightMid, bottomMid, rightPoint);
         }
     }
 }

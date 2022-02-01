@@ -49,11 +49,6 @@ namespace Fractals.Components
             return rectangle;
         }
 
-        /// <summary>
-        ///     Recursion draw
-        /// </summary>
-        /// <param name="rectangle">Previous rectangle</param>
-        /// <param name="count">Recursion depth</param>
         private void Draw(RectangleF rectangle, int count)
         {
             if (count == 0)

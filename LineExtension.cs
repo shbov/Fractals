@@ -4,14 +4,14 @@ using System.Windows.Shapes;
 
 namespace Fractals
 {
-    public class LineExt
+    public sealed class LineExtension
     {
-        private Line _line;
+        private readonly Line _line;
 
         public Line Item
         {
             get => _line;
-            set
+            init
             {
                 _line = value;
                 _line.StrokeThickness = 1;
@@ -20,6 +20,6 @@ namespace Fractals
         }
 
         public double Length => Math.Sqrt(Math.Pow(Item.X2 - Item.X1, 2) + Math.Pow(Item.Y2 - Item.Y1, 2));
-        public double Angle { get; set; }
+        public double Angle { get; init; }
     }
 }

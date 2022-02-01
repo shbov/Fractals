@@ -10,7 +10,7 @@ namespace Fractals.Components
             Canvas.Children.Clear();
 
             Draw(
-                new LineExt
+                new LineExtension
                 {
                     Item = new Line
                     {
@@ -24,7 +24,7 @@ namespace Fractals.Components
             );
         }
 
-        private void Draw(LineExt line, int depth)
+        private void Draw(LineExtension line, int depth)
         {
             if (depth == 0)
             {
@@ -34,7 +34,7 @@ namespace Fractals.Components
 
             var newLength = line.Length / 3;
 
-            var line1 = new LineExt
+            var line1 = new LineExtension
             {
                 Item = new Line
                 {
@@ -47,7 +47,7 @@ namespace Fractals.Components
             };
 
             var angle2 = line1.Angle + Math.PI / 3;
-            var line2 = new LineExt
+            var line2 = new LineExtension
             {
                 Item = new Line
                 {
@@ -60,7 +60,7 @@ namespace Fractals.Components
             };
 
             var angle3 = angle2 - 2 * Math.PI / 3;
-            var line3 = new LineExt
+            var line3 = new LineExtension
             {
                 Item = new Line
                 {
@@ -73,7 +73,7 @@ namespace Fractals.Components
             };
 
             var angle4 = angle3 + Math.PI / 3;
-            var line4 = new LineExt
+            var line4 = new LineExtension
             {
                 Item = new Line
                 {

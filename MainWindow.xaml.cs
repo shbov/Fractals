@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using Fractals.Windows;
 
 namespace Fractals
@@ -35,6 +36,11 @@ namespace Fractals
         {
             var window = new TriangleWindow();
             window.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

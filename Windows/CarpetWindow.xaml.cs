@@ -9,25 +9,25 @@ namespace Fractals.Windows
     /// </summary>
     public partial class CarpetWindow : Window
     {
-        private readonly CarpetFractal fractral = new();
+        private readonly CarpetFractal _fractral = new();
 
         public CarpetWindow()
         {
             InitializeComponent();
-            fractral.Canvas = canvas;
+            _fractral.Canvas = canvas;
         }
 
         private void DepthChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            fractral.Depth = Math.Max(1, (int) e.NewValue);
-            if (fractral.Canvas != null)
-                fractral.Render();
+            _fractral.Depth = Math.Max(1, (int) e.NewValue);
+            if (_fractral.Canvas != null)
+                _fractral.Render();
         }
 
         private void ViewboxLoaded(object sender, RoutedEventArgs e)
         {
-            if (fractral.Canvas != null)
-                fractral.Render();
+            if (_fractral.Canvas != null)
+                _fractral.Render();
         }
     }
 }
